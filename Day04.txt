@@ -1,0 +1,220 @@
+Day04 Task
+
+1)For the given json and iterate over for all loops in javascript(for,for in, for of, forEach)
+Answer:
+JSON
+var arr=[
+  {
+    "id": 1,
+    "fname": "Robert",
+    "lname": "Schwartz",
+  },
+  {
+    "id": 2,
+    "fname": "Lucy",
+    "lname": "Ballmer",  
+  },
+  {
+    "id": 3,
+    "fname": "Anna",
+    "lname": "Smith",  
+  },
+  {
+    "id": 4,
+    "fname": "Robert",
+    "lname": "Brown",
+  }];
+for(var i=0;i<arr.length;i++){
+  console.log(arr[i].id,arr[i].fname,arr[i].lname);
+}
+
+1)For Loop
+for(var i=0;i<arr.length;i++){
+  console.log(arr[i].id,arr[i].fname,arr[i].lname);
+}
+Output:
+1 'Robert' 'Schwartz'
+2 'Lucy' 'Ballmer'
+3 'Anna' 'Smith'
+4 'Robert' 'Brown'
+
+2)For in Loop
+for(var i=0;i<arr.length;i++){
+for(var a in arr[i]){
+  console.log(a,arr[i][a]);
+}
+}
+Output:
+id 1
+fname Robert
+lname Schwartz
+id 2
+fname Lucy
+lname Ballmer
+id 3
+fname Anna
+lname Smith
+id 4
+fname Robert
+lname Brown
+
+
+2)Create your own resume data in JSON Format
+var resume=[{
+    "Name" : "yogeshwari",
+    "Phone" : 123456789,
+    "Email" : "yogamalabe@gmail.com",
+    "Address" : "No.5, Nehru Street, Tindivanam"
+},
+{
+    "Carreer Objective": "Hard-working professional with 3+ years of experience and proven knowledge of Application development, capacity planning and programming.",
+},
+{
+    "Educational Qualification":[
+      {
+      "Degree": "B.E",
+      "Major" : "ECE",
+      "Institution": "Arunai Engineering College",
+      "Year of Passing" : 2017,
+      "Percentage" : 80
+      },
+      {
+        "Study" : "HSC",
+        "Board" : "State Board",
+        "Institution": "St. PGHSS",
+        "Year of Passing": 2013,
+        "Percentage": 80
+      },
+      {
+        "Study" : "SSLC",
+        "Board" : "State Board",
+        "Institution": "St. PGHSS",
+        "Year of Passing": 2011,
+        "Percentage": 92
+      }
+      ]
+},
+{
+      "Work Experience":[
+        {
+          "Role": "Assistant Executive",
+          "Organisation" : "Polyhose India Private Limited",
+          "Location": "Guduvanchery",
+          "From" : "Oct 2022",
+          "To" : "Dec 2022",
+          "Details": [
+            {
+              "1": "Handling the Customer like Daimler, Caterpillar, etc..",
+              "2": "Ensure Zero line stoppage for customers",
+              "3": "Analysis the stock statement in Finished Goods warehouse and plan to maintain the minimum inventory level as per the norms"
+            }
+            ]
+        },
+        {
+          "Role": "Computer Operator",
+          "Organisation" : "Special DRO",
+          "Location": "Kanchipuram",
+          "From" : "Sep 2020",
+          "To" : "Sep 2022",
+          "Details": [
+            {
+              "1": "Co-coordinating with other employees until a file will be closed",
+              "2": "Employee salary Billing",
+              "3": "Preparing Meeting Particulars by the end of the week and also month end"
+            }
+            ]
+        }
+        ]
+},
+ {
+          "Role": "Project Manager",
+          "Organisation" : "Coderays IT Private Limited",
+          "Location": "Chennai",
+          "From" : "Oct 2019",
+          "To" : "Sep 2020",
+          "Details": [
+            {
+              "1": "Ability to identify potential risks and mitigate them quickly, so that they don't affect the project milestones",
+              "2": "Responsible for the successful Planning, Execution, monitoring more than two teams and also control and closure publication of articles and issues with agreed timelines"
+            }
+            ]
+        },
+         {
+          "Role": "Android Developer",
+          "Organisation" : "Coderays IT Private Limited",
+          "Location": "Chennai",
+          "From" : "Aug 2018",
+          "To" : "Sep 2019",
+          "Details": [
+            {
+              "1": "Created an application with name of ABCD for Kids that was downloaded over 3L. This will have 3000 Users per day",
+              "2": "Tester for Mr.Racer Gaming Application"
+            }
+            ]
+        },
+        {
+          "Role": "Material Co-ordinator",
+          "Organisation" : "Stanadyne India Private Limited",
+          "Location": "Chennai",
+          "From" : "Oct 2017",
+          "To" : "Aug 2018",
+          "Details": [
+            {
+              "1": "Scheduling    Monthly    &    Weekly    Plan    for    both    in-house manufacturing and External Procurement.",
+              "2": "Monthly Work Order Creation and execution to meet production"
+            }
+            ]
+        },
+{
+	  "Skills": [
+            {
+              "1":  "Data Analyst",
+  "2":   "Project Management",
+   "3":  "Tester",
+   "4":  "UI Designer"          
+ }
+            ]
+},
+{
+	  "Training and Certificates": [
+            {
+              "1":  "Completed Core Java with J2EE at Accord Info Matrix",
+  "2":   "Completed Windows & Web Application development in .NET using C# language in Accord Info Matrix",        
+ }
+            ]
+},
+{
+	"Symposium": "Participated in National Level Technical Symposium at GTEC under title Nano Technology and its Applications"
+}
+];
+console.log(resume);
+
+
+
+3)Read about the difference between window, document and screen in javascript
+Window:
+The JavaScript window object sits at the top of the JavaScript Object hierarchy and represents the browser window. 
+The window object is supported by all browsers. 
+All global JavaScript objects , functions, and variables automatically become members of the window object. 
+The window is the first thing that gets loaded into the browser . 
+This window object has the majority of the properties like length, innerWidth, innerHeight, name, if it has been closed, its parents, and more.
+It holds things like window.location, window.history, window.screen, window.status, or the window.document
+Syntax:
+window.property_name;
+
+Document:
+The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. 
+When an HTML document is loaded into a web browser , it becomes a document object. 
+The document actually gets loaded inside the window object and has properties available to it like title, URL, cookie, etc. HTML documents, served with the "text/html" content type.
+With the help of document objects, we can add dynamic content to our web page. 
+Syntax:
+document.property_name;
+
+Screen:
+Screen is a small information object about physical screen dimensions . 
+It can be used to display screen width, height, colorDepth, pixelDepth etc. 
+It is not mandatory to write window prefix with screen object. 
+It can be written without window prefix.
+Properties:
+screen.width;
+screen.height;
